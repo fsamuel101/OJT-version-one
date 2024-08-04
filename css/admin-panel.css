@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-color: #ffffff;
+    --accent-color: #800015;
+    --font-main: 'Poppins', sans-serif;
+}
+
+
+
+.green-header {
+    width: 100%;
+    font-family: var(--font-main);
+    color: var(--accent-color);
+    font-size: 1.2em;
+}
+
+.solidgreen1 {
+    background-color: var(--accent-color);
+    height: 1.5em;
+    width: 100%;
+}
+
+.solidgreen2 {
+    background-color: var(--accent-color);
+    height: 1em;
+    width: 100%;
+}
+
+.admin-title{
+    padding: 2em;
+}
+
+a{
+    font-style: none;
+    text-decoration: none;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10rem;
+
+}
+
+img{
+    height: 300px;
+    overflow: hidden;
+    transition: 0.2s ease-in;
+}
+
+img:hover{
+    transform: scale(1.1);
+}
+
+.submitt{
+    background-color: #266a2d;
+    border: solid 1px var(--accent-color);
+}
+
+.goback{
+    background-color: red;
+}

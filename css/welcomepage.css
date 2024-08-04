@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+:root {
+    --primary-color: #ffffff;
+    --accent-color: #800015;
+    --secondary-accent: #b3cbb8;
+    --font-main: 'Poppins', sans-serif;
+}
+
+
+body{
+    background-color: var(--primary-color);
+    background-image: none;
+}
+
+.landingpage{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 2rem 4rem;
+}
+.history{
+    background-color: var(--secondary-accent);
+    font-family: var(--font-main);
+    width: 50%;
+    padding: 3em;
+    font-weight: bold;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+
+.welcome-message{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    gap: 1em;
+}
+.welcome-message h1{
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.button-41 {
+    background-color: var(--accent-color);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Playfair Display', serif;
+    height: auto;
+    line-height: 1.6;
+    outline: 0;
+    overflow: hidden;
+    padding: 1em;
+    pointer-events: auto;
+    position: relative;
+    text-align: center;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: top;
+    white-space: nowrap;
+    width: 100%;
+    z-index: 9;
+    border: 0;
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 1em;
+  }
+  
+  .button-41:hover {
+    background: var(--secondary-accent);
+  }
+
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    .history {
+        padding: 0.5em; /* Adjust padding for smaller screens */
+    }
+
+    .button-41 {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+        padding: 0.5em; /* Adjust padding for smaller screens */
+    }
+
+    .landingpage{
+        flex-direction: column-reverse;
+        margin: 1em;
+        font-size: 0.75em;
+    }
+    .history{
+        width: 100%;
+    }
+
+    .history p{
+        font-size: 10px;
+    }
+    .welcome-message h1{
+        font-size: 1em;
+    }
+}
+
+.button-41{
+    padding: 0.5em;
+}

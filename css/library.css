@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-color: #ffffff;
+    --accent-color: #800015;
+    --font-main: 'Poppins', sans-serif;
+    --font-sec: 'Hedvig Letters Serif', serif;
+}
+
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.hover{
+    color: #800015;
+}
+.hover:hover{
+    background-color: var(--accent-color);
+    color: white;
+}
+
+
+.green-header {
+    width: 100%;
+    font-family: var(--font-sec);
+    color: var(--accent-color);
+    font-size: 1.2em;
+}
+
+.solidgreen1 {
+    background-color: var(--accent-color);
+    height: 1.5em;
+    width: 100%;
+}
+
+.solidgreen2 {
+    background-color: var(--accent-color);
+    height: 1em;
+    width: 100%;
+}
+
+.admin-title {
+    padding: 0.5em;
+    display: flex;
+    justify-content: flex-start;
+    gap: 1em;
+    position: relative; /* Add this line to establish a positioning context */
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Position below the parent container */
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for better visibility */
+    z-index: 99;
+}
+
+.dropdown-menu a {
+    color: var(--accent-color);
+    font-style: var(--font-main);
+    text-decoration: none;
+    padding: 10px; /* Add padding for better spacing */
+    display: block; /* Make the links block-level elements */
+    
+}
+
+.show {
+    display: flex;
+}
+/* Basic styling for the hamburger container */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: space-between;
+    width: 5em;
+    z-index: 9;
+  }
+  
+  /* Styling for individual lines in the hamburger icon */
+  .hamburger div {
+    width: 100%;
+    height: 15px;
+    background-color: var(--accent-color);/* You can change the color as per your design */
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  .hide{
+    display: none;
+  }
+  /* Styling for the menu open state (optional) */
+  .hamburger.active div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .hamburger.active div:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+.library{
+    display: grid;
+    grid-template-columns: 20% 60% 30%;
+    width: 90%;
+    padding: 2em;
+    justify-content: center;
+}
+.categories ul li a{
+    text-decoration: none;
+    list-style: none;
+    color: var(--accent-color);
+    line-height: 1.6;
+
+}
+
+.h{
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.categories{
+    position: sticky;
+    top: 0;
+}
+li:hover{
+    background-color: rgb(147, 173, 147);
+}
+
+.categories ul li.active {
+    background-color: var(--accent-color); /* Change the background color to your desired highlight color */
+    border-radius: 4px; /* Add rounded corners for better appearance */
+}
+
+.categories ul li.active a {
+    color: #ffffff; /* Change the text color of the link inside the active li */
+}
+
+li{
+    font-family: Arial, Helvetica, serif;
+    
+    
+}
+
+
+ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: var(--accent-color); /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+  }
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    min-height: fit-content;
+    padding: 0 2em;
+}
+
+.search-container {
+    background-color: white;
+    padding: 0 1em; /* Adjust the padding to your preference */
+    position: sticky;
+    top: 0;
+    height: 70vh;
+    overflow-y: auto;
+    margin-top: 20px;
+}
+
+form {
+    background-color: #fff;
+    padding: 1em; /* Adjust the padding to your preference */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    width: 100%; /* Make the form width 100% */
+    box-sizing: border-box;
+}
+
+input[type="text"] {
+    flex: 1; /* Allow the input to take the remaining width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: context-menu;
+    outline: inherit;
+}
+.hamb{
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    background-color: var(--accent-color );
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: context-menu; 
+}
+/* change the value of cursor to context */
+
+.button:hover {
+    background-color: #45a049;
+}
+.books{
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 0.5em;
+    font-size: 8px;
+    border-radius: 5px;
+    height: fit-content;
+    overflow: hidden;
+    position: relative;
+    width: 20em;
+    height: 250px;
+
+}
+
+.book-cover{
+    height: 200px;
+    width: 150px;
+}
+
+.books:hover{
+    border: solid 3px var(--accent-color);
+}
+
+h2.book-title{
+    z-index: 999999;
+}
+.book-link{
+    text-decoration: none;
+    color: var(--accent-color);
+    font-family: var(--font-main);
+    text-align: center;
+}
+.books .book-title {
+    max-width: 150px;
+    line-height: 1.5em;
+    /* height: 3em; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+.search-results{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+#search-form{
+    position: sticky;
+    top: 0;
+}
+
+.search-books{
+    width: 100%;
+    font-size: 4px;
+    margin-top: 3em;
+}
+.search-book-cover{
+    height: 100px;
+    width: 75px;
+}
+
+.search-book-link{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: var(--font-main);
+    color: var(--accent-color);
+    font-size: 3em;
+    gap: 2em;
+    text-decoration: none;
+
+}
+.search-book-link:hover{
+    box-shadow: rgba(38,106,45, 0.3) 0px 30px 60px -12px inset, rgba(14, 108, 6, 0.3) 0px 18px 36px -18px inset;
+}
+
+.hamburger1{
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+    .solidgreen1, .solidgreen2{
+        height: 0.5em;
+    }
+
+    .admin-title div:last-child{
+        font-size: 0.75em;
+    }
+    .admin-title {
+        padding: 0.1em;
+        display: flex;
+        justify-content: flex-start;
+        gap: 1em;
+        position: relative; /* Add this line to establish a positioning context */
+    }
+    
+    .dropdown-menu {
+        position: absolute;
+        top: 100%; /* Position below the parent container */
+        left: 0;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for better visibility */
+        z-index: 99;
+    }
+    
+    .dropdown-menu a {
+        color: var(--accent-color);
+        font-style: var(--font-main);
+        text-decoration: none;
+        padding: 5px; /* Add padding for better spacing */
+        display: block; /* Make the links block-level elements */
+        
+    }
+    
+    .show {
+        display: flex;
+    }
+    /* Basic styling for the hamburger container */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        justify-content: space-between;
+        width: 3em;
+        z-index: 999999;
+      }
+      
+      /* Styling for individual lines in the hamburger icon */
+      .hamburger div {
+        width: 100%;
+        height: 6px;
+        background-color: var(--accent-color);/* You can change the color as per your design */
+        margin: 6px 0;
+        transition: 0.4s;
+        z-index: 1;
+      }
+      .hide{
+        display: none;
+      }
+      /* Styling for the menu open state (optional) */
+      .hamburger.active div:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+      }
+      
+      .hamburger.active div:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .hamburger.active div:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+      }
+
+      .library{
+        position: relative;
+        width: 100%;
+        padding: 1em;
+        display: flex;
+        flex-direction: column-reverse;
+      }
+
+      .search-container{
+        margin-top: 2em;
+        height: max-content;
+        border: none;
+      }
+
+      .menu{
+        position:absolute;
+        z-index: 99999;
+        top: 0.01%;
+        width: 100em;
+      }
+      .hamburger1{
+        display: block;
+        height: 3em;
+      }
+      .dropdown {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    
+    .dropdown ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .dropdown li a {
+        display: block;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+    }
+    
+    .dropdown li a:hover {
+        background-color: #ddd;
+    }
+
+    .white{
+        color: var(--primary-color);
+    }
+
+    .dropdown-menu a {
+        color: var(--accent-color);
+        font-style: var(--font-main);
+        text-decoration: none;
+        padding: 1px; /* Add padding for better spacing */
+        display: block; /* Make the links block-level elements */
+    }
+
+    ul li::before {
+        content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        color: var(--accent-color); /* Change the color */
+        font-weight: bold; /* If you want it to be bold */
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        margin-left: 0; /* Also needed for space (tweak if needed) */
+        padding: 0;
+      }
+
+    .categories, ul, .menu, li, dropdown{
+        width: 10em;
+        padding: 0;
+        border: none;
+    }
+    .book-cover{
+        height: 150px;
+        width: 100px;
+        transition: transform 0.3s;
+    }
+    
+    .book-cover:hover{
+        opacity: 0.5;
+    }
+    .back{
+        background-color: #266a2d;
+    }
+    .book-link{
+        text-decoration: none;
+        color: var(--accent-color);
+        font-family: var(--font-main);
+        text-align: center;
+    }
+    .books .book-title {
+        max-width: 150px;
+        line-height: 1.5em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .book-title{
+        font-size: 1em;
+      }
+
+      .dropdown-menu{
+        z-index: 99999999999999999;
+      }
+
+      .books{
+        height: 200px;
+        width: 120px;
+      }
+}
+.row{
+    display: flex;
+    gap: 8em;
+}
+
+.book-container{
+    border-left: 2px solid var(--accent-color);
+    border-right: 2px solid var(--accent-color);
+}

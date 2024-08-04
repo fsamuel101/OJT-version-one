@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+:root {
+    --primary-color: #ffffff;
+    --accent-color: #800000;
+    --font-main: 'Poppins', sans-serif;
+}
+
+.green-header {
+    width: 100%;
+    height: 2rem;
+    background-color: var(--accent-color);
+
+}
+.green{
+    color: var(--accent-color);
+}
+
+.m{
+    color: var(--accent-color);
+}
+.main-font-title {
+    color: var(--accent-color);
+    letter-spacing: 0.05rem;
+    font-size: 2em;
+}
+
+.header-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1em;
+    background-color: var(--primary-color);
+}
+
+.brand{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.logo-image {
+    max-width: 100%;
+    max-height: 9rem;
+    height: auto;
+}
+
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    /* TO reduce the size of this */
+    gap: 0em;                        
+    color: var(--accent-color);
+    margin-top: 5px;
+}
+
+.contact-container p:nth-child(1) {
+    font-weight: bold;
+
+}
+
+/* FOOTER DESIGN */
+.solid-green{
+    width: 100%;
+    height: 2rem;
+    background-color: var(--accent-color);
+}
+
+/* INDEX DESIGN */
+
+body {
+    background-image: url('../images/landingPage.png');
+    /* Replace with the path to your image */
+    background-repeat: no-repeat;
+    /* Optional: prevent image repetition */
+    background-size: cover;
+    /* Optional: cover the entire background */
+}
+
+.index-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.index-container section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 9%;
+    font-family: var(--font-main);
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.green-input {
+    color: var(--primary-color);
+    /* From https://css.glass */
+    background: rgba(128, 0, 0, 0.5);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(8.2px);
+    border: 1px solid rgba(128, 0, 0, 0.26);
+    background-clip: padding-box;
+    font-size: 2em;
+    padding: 0.3em;
+    opacity: 0.9;
+    font-weight: 200;
+}
+.index-container form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.index-container form button {
+    width: 100%;
+}
+
+.margin-1{
+    margin-left: 15px;
+}
+
+.index-container form input::placeholder {
+    opacity: 1;
+    color: var(--primary-color);/* Change this to your desired color */
+  }
+
+  .forgot{
+    color: var(--primary-color);
+    margin: 0.5em;
+    text-decoration: none;
+  }
+.register-button{
+    text-decoration: none;
+    padding: 0 2em;
+}
+.signup-container{
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+    /* Mobile-specific styles go here */
+    .header-main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .brand {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .logo-image {
+        max-width: 100%;
+        max-height: 5rem; /* Adjust height as needed for mobile */
+        height: auto;
+    }
+
+    .contact-details {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .index-container section {
+        margin-top: 5%;
+        font-size: 1.2em; /* Adjust the font size for mobile */
+    }
+
+    .index-container form {
+        gap: 1em;
+    }
+
+    .index-container form button {
+        width: 100%;
+    }
+
+    /* Additional styles for smaller text */
+    .main-font-title {
+        font-size: 1.5em;
+    }
+
+    /* Add more styles as needed for smaller text on other elements */
+}
+
+@media only screen and (max-width: 600px) {
+    /* Styles for smaller screens go here */
+    .index-container section {
+        text-align: center;
+        margin-top: 40%;
+    }
+
+    .green-input {
+        width: 100%; /* Make the login and register buttons full-width on smaller screens */
+        font-size: 20px; /* Adjust the font size for smaller screens */
+    }
+
+    .forgot,
+    .register-button {
+        display: block;
+        width: 50%;
+        margin-top: 1em; /* Adjust the margin as needed */
+        text-align: center;
+        font-size: 15px; /* Adjust the font size for smaller screens */
+    }
+    body{
+        background-image: url('../images/with bg.png');
+        /* Replace with the path to your image */
+        background-repeat: no-repeat;
+        /* Optional: prevent image repetition */
+        background-size: cover;
+        /* Optional: cover the entire background */
+        height: 100vh;
+    }
+
+
+    .contact-container img{
+        height: 40px;
+    }
+
+    .contact-container p{
+        font-size: 0.6em;
+    }
+
+
+    .brand{
+        flex-direction: row;
+        gap: 0;
+    }
+    .brand h1{
+        font-size: 1.23em;
+    }
+
+}
