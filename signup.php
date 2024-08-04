@@ -47,6 +47,7 @@ require_once 'includes/config_session.inc.php';
 
         </div>
     </div>
+    <div class="solid-green2"></div>
 
 
     <script>

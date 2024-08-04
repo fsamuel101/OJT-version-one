@@ -9,7 +9,7 @@
 
 :root {
     --primary-color: #ffffff;
-    --accent-color: #266a2d;
+    --accent-color: #800015;;
     --font-main: 'Poppins', sans-serif;
 }
  
@@ -32,12 +32,12 @@ form {
     max-width: 400px;
     width: 100%;
     /* From https://css.glass */
-    background: rgba(38, 106, 45, 0.49);
+    background: rgba(196, 52, 52, 0.49);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
-    border: 1px solid rgba(38, 106, 45, 0.47);
+    border: 1px solid rgba(119, 16, 16, 0.863);
     padding: 2em;
     color: var(--accent-color);
 }

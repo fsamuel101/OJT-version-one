@@ -1,19 +1,21 @@
 <div class="green-header">
-
 </div>
+
 <nav class="header-main">
     <div class="brand">
         <img src="images\SLIS-logo.png" class="logo-image" alt="">
         <div class="title">
             <h1 class="main-font-title">SOUTH LAKES INTEGRATED SCHOOL</h1>
-            <h2 class="m">21st Century Challenge-Based Learning</h2>
-            <h3 class="m"> Brgy. San Jose, San Pablo City, Laguna 4000</h3>
+            <div class="center">
+                <h2 class="m">21st Century Challenge-Based Learning</h2>
+                <h3 class="m"> Brgy. San Jose, San Pablo City, Laguna 4000</h3>
+            </div>
+
         </div>
     </div>
 
 
     <div class="contact-details">
-
         <div class="email-ad contact-container">
             <img src="images/email.png" alt="" height="45px;">
             <div class="margin-1">

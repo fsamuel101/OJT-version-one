@@ -47,6 +47,14 @@ body {
     padding: 0.25em 1em;
 }
 
+.solid-green2{
+    width: 100%;
+    height: 2rem;
+    background-color: var(--accent-color);
+    position: absolute;
+    bottom: 0;
+}
+
 .signup-container {
     display: flex;
     align-items: center;

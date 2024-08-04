@@ -16,7 +16,7 @@
             </div>
 
             <div>
-                <a href="welcome.php" style="text-decoration: none; color: green;"><h1><strong>PLSP Library</strong></h1></a>
+                <a href="welcome.php" style="text-decoration: none; color: #800015;;"><h1><strong>SLIS Library</strong></h1></a>
                 <p>Browse books</p>
             </div>
 

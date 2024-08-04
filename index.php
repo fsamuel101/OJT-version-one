@@ -57,7 +57,7 @@ if (isset($_SESSION['user_id'])) {
 
     
     </div>
-    
+    <div class="solid-green2"></div>
 </body>
 
 </html>

@@ -53,6 +53,12 @@ VALUES
     ('20-1030', 'White', 'Mia', 'CCST');
 
 -- to update something directly in the database
+
+INSERT INTO student_data (student_number, last_name, first_name, college)
+VALUES
+(1, 'admin, admin', 'admin');
+
+
 UPDATE student_user
 SET role = 'admin'
 WHERE id = 1;
